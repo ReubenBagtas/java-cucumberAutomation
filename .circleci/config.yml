@@ -12,3 +12,13 @@ jobs:
           name: Run Critical Path Tests
           command: |
             mvn clean verify -Dcucumber.options="--tags @smoke" -Dbrowser.instances=1
+
+workflows:
+  version: 2
+  master-changed:
+    jobs:
+      - Critical_Path_Test_Staging:
+          filters:
+            branches:
+              only:
+                - master
