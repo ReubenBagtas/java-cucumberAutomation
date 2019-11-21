@@ -11,9 +11,7 @@ jobs:
       - checkout
       - run:
           name: Run Critical Path Tests
-          command: |
-            set - e
-            source mvn clean verify -q -Dcucumber.options="--tags @smoke" -Dbrowser.instances=1
+          command: mvn clean verify -q -Dcucumber.options="--tags @smoke" -Dbrowser.instances=1
 
       - store_test_results:
           path: ./target/surefire-reports/junitreports/
