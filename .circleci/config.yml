@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  Critical_Path_Test_Staging:
+    docker:
+      - image: circleci/openjdk:8u232-jdk-browsers
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command:
+      - run:
+          name: Run Critical Path Tests
+          command: |
+            mvn clean verify -Dcucumber.options="--tags @smoke" -Dbrowser.instances=1
+
