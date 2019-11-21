@@ -15,7 +15,7 @@ jobs:
             mvn clean verify -q -Dcucumber.options="--tags @smoke" -Dbrowser.instances=1
 
       - store_test_results:
-          path: ./target/allure-results/
+          path: ./target/surefire-reports/junitreports/
 
 workflows:
   version: 2.1
