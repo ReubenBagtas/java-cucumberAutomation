@@ -1,13 +1,15 @@
 version: 2.1
 
-orbs:
-  allure: ayte/allure@0.1.2
+#orbs:
+#  allure: ayte/allure@0.1.2
 
 jobs:
 
   Critical_Path_Test_Staging:
     docker:
       - image: circleci/openjdk:8u232-jdk-browsers
+
+    working_directory: ~/repo
 
     steps:
       - checkout
@@ -16,8 +18,11 @@ jobs:
           command: |
             mvn clean verify -q -Dcucumber.options="--tags @smoke" -Dbrowser.instances=1
 
+     - store_test_results:
+        path: ./target/allure-results/
+
 workflows:
-  version: 2
+  version: 2.1
   master-changed:
     jobs:
       - Critical_Path_Test_Staging:
