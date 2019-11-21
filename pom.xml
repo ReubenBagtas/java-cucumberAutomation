@@ -12,7 +12,7 @@
   <properties>
     <!-- other dependencies -->
     <assertj.version>3.0.0</assertj.version>
-    <checkstyle.version>6.18</checkstyle.version>
+    <checkstyle.version>8.18</checkstyle.version>
     <common.io.version>2.4</common.io.version>
     <commons-lang.version>3.7</commons-lang.version>
     <groovy.version>2.4.5</groovy.version>
