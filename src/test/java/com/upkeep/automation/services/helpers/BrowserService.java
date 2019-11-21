@@ -1,5 +1,6 @@
 package com.upkeep.automation.services.helpers;
 
+import com.upkeep.automation.selenium.AutomationWait;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;

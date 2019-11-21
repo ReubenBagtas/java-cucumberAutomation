@@ -1,7 +1,7 @@
 package com.upkeep.automation.config;
 
 import com.upkeep.automation.components.TestProperties;
-import com.upkeep.automation.services.helpers.AutomationWait;
+import com.upkeep.automation.selenium.AutomationWait;
 
 
 import org.openqa.selenium.WebDriver;

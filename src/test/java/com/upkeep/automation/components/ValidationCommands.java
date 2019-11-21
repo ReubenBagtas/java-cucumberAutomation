@@ -1,6 +1,6 @@
 package com.upkeep.automation.components;
 
-import com.upkeep.automation.services.helpers.AutomationWait;
+import com.upkeep.automation.selenium.AutomationWait;
 import com.upkeep.automation.services.helpers.BrowserService;
 
 

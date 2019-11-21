@@ -3,6 +3,7 @@ package com.upkeep.automation.services.helpers;
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 
+import com.upkeep.automation.selenium.AutomationWait;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

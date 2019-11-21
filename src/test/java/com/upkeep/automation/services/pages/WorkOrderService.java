@@ -1,7 +1,7 @@
 package com.upkeep.automation.services.pages;
 
 import com.upkeep.automation.services.elements.NavbarElements;
-import com.upkeep.automation.services.helpers.AutomationWait;
+import com.upkeep.automation.selenium.AutomationWait;
 import com.upkeep.automation.services.helpers.BrowserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

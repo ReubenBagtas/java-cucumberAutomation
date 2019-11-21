@@ -1,4 +1,4 @@
-package com.upkeep.automation.services.helpers;
+package com.upkeep.automation.selenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 import java.util.List;
@@ -15,7 +17,7 @@ import java.util.List;
 public class AutomationWait {
 
   private FluentWait<WebDriver> webDriverWait;
-  
+
   public AutomationWait(long maxWaitTimeInSeconds, WebDriver webDriver) {
     webDriverWait = new FluentWait<>(webDriver);
     webDriverWait.withTimeout(Duration.ofSeconds(maxWaitTimeInSeconds))

@@ -1,10 +1,10 @@
 package com.upkeep.automation.services.pages;
 
 import com.upkeep.automation.components.TestProperties;
-import com.upkeep.automation.services.helpers.AutomationWait;
 import com.upkeep.automation.services.helpers.BrowserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
 import static com.upkeep.automation.services.elements.SignupPageElements.SIGN_UP_FORM;
 import static com.upkeep.automation.services.elements.SignupPageElements.EMAIL_INPUT;
 import static com.upkeep.automation.services.elements.SignupPageElements.PASSWORD_INPUT;
@@ -20,15 +20,12 @@ public class SignupPageService {
 
 	private final BrowserService browserService;
 	private final TestProperties testProperties;
-	private final AutomationWait automationWait;
 
 	@Autowired
 	public SignupPageService(BrowserService browserService,
-													 TestProperties testProperties,
-													 AutomationWait automationWait) {
+													 TestProperties testProperties) {
 		this.browserService = browserService;
 		this.testProperties = testProperties;
-		this.automationWait = automationWait;
 	}
 
 	public void navigate_to_signup_page() {
@@ -39,7 +36,7 @@ public class SignupPageService {
 	}
 
 	public void wait_until_signup_page_is_displayed() {
-		automationWait.untilElementVisible(SIGN_UP_FORM.getSelector());
+
 	}
 
 	//todo Add business type selection in the parameter
@@ -48,6 +45,5 @@ public class SignupPageService {
 															 String firstName,
 															 String lastnName,
 															 String phoneNumber) {
-		browserService.
 	}
 }
