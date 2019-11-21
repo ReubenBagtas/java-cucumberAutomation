@@ -12,6 +12,7 @@ jobs:
       - run:
           name: Run Critical Path Tests
           command: |
+            set - e
             mvn clean verify -q -Dcucumber.options="--tags @smoke" -Dbrowser.instances=1
 
       - store_test_results:
