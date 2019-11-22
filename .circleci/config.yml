@@ -15,15 +15,16 @@ jobs:
       - run:
           name: Save test results
             command: |
-              mkdir -p ~/test-results/junit/
-              find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/test-results/junit/ \;
+              mkdir ./test-results
+              cp ./target/surefire-reports/testng-results.xml ./test-results
             when: always
 
+
       - store_test_results:
-          path: ./target/surefire-reports/testng-results.xml
+          path: ./test-results
 
       - store_artifacts:
-          path: ./target/surefire-reports/
+          path: ./test-results
 
 workflows:
   version: 2
