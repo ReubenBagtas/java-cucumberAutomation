@@ -1,6 +1,4 @@
 version: 2.1
-orbs:
-  allure: ayte/allure@0.1.2
 
 jobs:
   Critical_Path_Test_Staging:
@@ -16,7 +14,10 @@ jobs:
           command: mvn clean verify -q -Dcucumber.options="--tags @smoke" -Dbrowser.instances=1
 
       - store_test_results:
-          path: ./target/surefire-reports/junitreports/
+          path: ./target/surefire-reports/testng-results.xml
+
+      - store_artifacts:
+          path: ./target/surefire-reports/
 
 workflows:
   version: 2.1
