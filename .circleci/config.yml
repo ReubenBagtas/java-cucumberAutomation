@@ -11,18 +11,18 @@ jobs:
       - checkout
       - run:
           name: Run Critical Path Tests
-          command: mvn clean verify -q -Dcucumber.options="--tags @smoke" -Dbrowser.instances=1
+          command: |
+            set -e
+            mvn clean verify -q -Dcucumber.options="--tags @smoke" -Dbrowser.instances=1
       - run:
           name: Save test results
           command: |
+            set -e
             mkdir ./test-results
             cp ./target/surefire-reports/testng-results.xml ./test-results
           when: always
 
       - store_test_results:
-          path: ./test-results
-
-      - store_artifacts:
           path: ./test-results
 
 workflows:
