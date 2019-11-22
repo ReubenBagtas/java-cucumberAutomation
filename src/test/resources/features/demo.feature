@@ -3,13 +3,6 @@ Feature: Example
   I want to make sure of stuff
   In order to ensure awesomeness across the world
 
-  @fail
-  @demo
-  Scenario: Verify error in reports
-    Given user is on the login page
-    When user logs in with valid admin credentials
-    Then throw an error
-
   @demo
   @circle
   Scenario: Verify user can sign in
@@ -22,3 +15,10 @@ Feature: Example
     Given user is logged in
     When a Work Order is created
     Then Work Order is visible on the Work Order dashboard
+
+  @fail
+  @demo
+  Scenario: Verify error in reports
+    Given user is on the login page
+    When user logs in with valid admin credentials
+    Then throw an error

@@ -221,7 +221,7 @@
           </argLine>
           <trimStackTrace>true</trimStackTrace>
           <printSummary>true</printSummary>
-          <testFailureIgnore>true</testFailureIgnore>
+          <testFailureIgnore>false</testFailureIgnore>
           <skipTests>false</skipTests>
           <properties>
             <property>
