@@ -11,6 +11,7 @@ Feature: Example
     Then throw an error
 
   @demo
+  @circle
   Scenario: Verify user can sign in
     Given user is on the login page
     When user logs in with valid admin credentials
