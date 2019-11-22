@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 
 jobs:
   Critical_Path_Test_Staging:
@@ -17,7 +17,7 @@ jobs:
           path: ./target/surefire-reports/junitreports/
 
 workflows:
-  version: 2.1
+  version: 2
   master-changed:
     jobs:
       - Critical_Path_Test_Staging:
