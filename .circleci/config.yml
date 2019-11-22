@@ -14,11 +14,10 @@ jobs:
           command: mvn clean verify -q -Dcucumber.options="--tags @smoke" -Dbrowser.instances=1
       - run:
           name: Save test results
-            command: |
-              mkdir ./test-results
-              cp ./target/surefire-reports/testng-results.xml ./test-results
-            when: always
-
+          command: |
+            mkdir ./test-results
+            cp ./target/surefire-reports/testng-results.xml ./test-results
+          when: always
 
       - store_test_results:
           path: ./test-results
